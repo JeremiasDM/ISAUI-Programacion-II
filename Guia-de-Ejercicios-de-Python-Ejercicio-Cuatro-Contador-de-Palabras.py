@@ -1,3 +1,8 @@
+"""""
+Ejercicio 4: Contador de Palabras
+Desarrolla un programa en Python que solicite al usuario que ingrese una frase y luego cuente y muestre el número de palabras en esa frase.
+"""""
+
 def contar_palabras(frase: str) -> int:
     palabras = frase.split()
     return len(palabras)
