@@ -10,19 +10,19 @@ def evaluar_calificaciones(calificaciones):
     
     promedio = sumatoria / len(calificaciones)
     
-    if promedio > 8:
+    if promedio >= 8:
         condicion = "PROMOCIONAL"
-    else:
+    elif promedio > 4: 
         condicion = "REGULAR"
+    elif promedio < 4:
+        condicion = "DESAPROBADO"    
     
     return sumatoria, promedio, condicion
 
+calificaciones = [9, 8, 10, 7, 9]
+sumatoria, promedio, condicion = evaluar_calificaciones(calificaciones)
 
-Calificasiones = input("Ingrese las Calificasiones:")
-
-lista = [Calificasiones]
-
-sumatoria, promedio, condicion = evaluar_calificaciones(Calificasiones)
 print(f"Sumatoria: {sumatoria}")
 print(f"Promedio: {promedio}")
 print(f"Condición: {condicion}")
+
